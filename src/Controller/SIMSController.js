@@ -128,6 +128,17 @@ pucController.contactUs =((req,res)=>{
       })
 
   });
+  pucController.deleteImage =((req,res)=>{
+      pool.query(`call p_remove_image_sims(${req.params.id})`)
+      .then(function(rows){
+        res.status(400).send("success")
+       })
+      .catch((err)=>{
+        res.status(404).send("Error")
+      })
+
+  });
+
 
    
 

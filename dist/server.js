@@ -546,6 +546,13 @@ pucController.deleteEvents = (req, res) => {
     res.status(404).send("Error");
   });
 };
+pucController.deleteImage = (req, res) => {
+  __WEBPACK_IMPORTED_MODULE_1__Util_db__["a" /* default */].query(`call p_remove_image_sims(${req.params.id})`).then(function (rows) {
+    res.status(400).send("success");
+  }).catch(err => {
+    res.status(404).send("Error");
+  });
+};
 
 /* harmony default export */ __webpack_exports__["a"] = (pucController);
 
