@@ -5,6 +5,7 @@ import cors from 'cors';
 import CentralRoute from './Routers/CentralRoute';
 import PucRoute from './Routers/PucRoute';
 import SchoolRoute from './Routers/SchoolRoute';
+import SIMSRoute from './Routers/SIMSRoute';
 //Intializing express app
 const app=express();
 
@@ -15,4 +16,5 @@ app.use(express.static(__dirname + '/Views'));
 app.use(`/Central`,CentralRoute);
 app.use(`/Puc`,PucRoute);
 app.use(`/School`,SchoolRoute);
+app.use(`/SIMS`,SIMSRoute);
 app.listen(process.env.PORT || 3333);
