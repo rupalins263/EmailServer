@@ -121,7 +121,7 @@ var mysql = __webpack_require__(17);
 var pool;
 
 pool = mysql.createPool({
-  host: "localhost",
+  host: "127.0.0.1",
   user: "ragadmin",
   password: "ragadmin123",
   database: "dbsoundarya",
