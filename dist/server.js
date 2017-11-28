@@ -272,7 +272,9 @@ var CentralController = {};
 CentralController.admission = (req, res) => {
    var mailOptions = {
       from: 'zenopsysevolve@gmail.com',
-      to: 'zenopsysevolve@gmail.com',
+      to: 'soundaryacentralschool@gmail.com',
+      cc: 'dananjayagokhale@gmail.com',
+      bcc: 'zenopsysevolve@gmail.com',
       subject: 'Soundarya Central School contact us',
       html: `<p>Name : ${req.body.name}</p>
           <p>Sex : ${req.body.sex}</p>
@@ -291,7 +293,9 @@ CentralController.admission = (req, res) => {
 CentralController.contactUs = (req, res) => {
    var mailOptions = {
       from: 'zenopsysevolve@gmail.com',
-      to: 'zenopsysevolve@gmail.com',
+      to: 'soundaryacentralschool@gmail.com',
+      cc: 'dananjayagokhale@gmail.com',
+      bcc: 'zenopsysevolve@gmail.com',
       subject: 'Soundarya Central School  Admission',
       html: `<p>Name : ${req.body.name}</p>
           <p>Contact Num : ${req.body.number}</p>
@@ -434,7 +438,9 @@ var pucController = {};
 pucController.contactUs = (req, res) => {
   var mailOptions = {
     from: 'zenopsysevolve@gmail.com',
-    to: 'dananjayagokhale@gmail.com',
+    to: 'degreesoundarya@gmail.com',
+    cc: 'dananjayagokhale@gmail.com',
+    bcc: 'zenopsysevolve@gmail.com',
     subject: 'Soundarya PU College  Contact',
     html: `<p>Name : ${req.body.name}</p>
           <p>Contact Num : ${req.body.number}</p>
@@ -571,7 +577,9 @@ var SchoolController = {};
 SchoolController.contactUs = (req, res) => {
    var mailOptions = {
       from: 'zenopsysevolve@gmail.com',
-      to: 'dananjayagokhale@gmail.com',
+      to: 'soundaryaschool@gmail.com',
+      cc: 'dananjayagokhale@gmail.com',
+      bcc: 'zenopsysevolve@gmail.com',
       subject: 'Soundarya School  Contact us',
       html: `<p>Name : ${req.body.name}</p>
           <p>Contact Num : ${req.body.number}</p>
@@ -586,7 +594,9 @@ SchoolController.contactUs = (req, res) => {
 SchoolController.alumini = (req, res) => {
    var mailOptions = {
       from: 'zenopsysevolve@gmail.com',
-      to: 'zenopsysevolve@gmail.com',
+      to: 'soundaryaschool@gmail.com',
+      cc: 'dananjayagokhale@gmail.com',
+      bcc: 'zenopsysevolve@gmail.com',
       subject: 'Soundarya School  Alumini',
       html: `<p>Name : ${req.body.name}</p>
           <p>Contact Num : ${req.body.number}</p>
@@ -607,7 +617,7 @@ SchoolController.getEvents = (req, res) => {
          response: rows[0]
       });
    }).catch(err => {
-      res.status(404).send("Error");
+      res.status(404).send(err);
    });
 };
 SchoolController.getUpcomingEvents = (req, res) => {
@@ -619,7 +629,7 @@ SchoolController.getUpcomingEvents = (req, res) => {
          response: rows[0]
       });
    }).catch(err => {
-      res.status(404).send("Error");
+      res.status(404).send(err);
    });
 };
 SchoolController.createEvents = (req, res) => {
@@ -642,7 +652,7 @@ SchoolController.getAlbums = (req, res) => {
          response: rows[0]
       });
    }).catch(err => {
-      res.status(404).send("Error");
+      res.status(404).send(err);
    });
 };
 SchoolController.postAlbums = (req, res) => {
@@ -654,7 +664,7 @@ SchoolController.postAlbums = (req, res) => {
          response: rows[0]
       });
    }).catch(err => {
-      res.status(404).send("Error");
+      res.status(404).send(err);
    });
 };
 SchoolController.postImage = (req, res) => {
@@ -666,7 +676,7 @@ SchoolController.postImage = (req, res) => {
          response: rows[0]
       });
    }).catch(err => {
-      res.status(404).send("Error");
+      res.status(404).send(err);
    });
 };
 
@@ -691,7 +701,7 @@ SchoolController.getImage = (req, res) => {
          response: rows[0]
       });
    }).catch(err => {
-      res.status(404).send("Error");
+      res.status(404).send(err);
    });
 };
 
@@ -703,14 +713,14 @@ SchoolController.deleteEvents = (req, res) => {
          response: rows[0]
       });
    }).catch(err => {
-      res.status(404).send("Error");
+      res.status(404).send(err);
    });
 };
 SchoolController.deleteImage = (req, res) => {
    __WEBPACK_IMPORTED_MODULE_1__Util_db__["a" /* default */].query(`call p_remove_image_school(${req.params.id})`).then(function (rows) {
       res.status(400).send("success");
    }).catch(err => {
-      res.status(404).send("Error");
+      res.status(404).send(err);
    });
 };
 
@@ -730,7 +740,9 @@ var pucController = {};
 pucController.contactUs = (req, res) => {
   var mailOptions = {
     from: 'zenopsysevolve@gmail.com',
-    to: 'zenopsysevolve@gmail.com',
+    to: 'soundaryapucollege@gmail.com',
+    cc: 'dananjayagokhale@gmail.com',
+    bcc: 'zenopsysevolve@gmail.com',
     subject: 'Soundarya PU College  Contact',
     html: `<p>Name : ${req.body.name}</p>
           <p>Contact Num : ${req.body.number}</p>

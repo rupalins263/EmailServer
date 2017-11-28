@@ -6,8 +6,10 @@ var SchoolController={};
 
 SchoolController.contactUs =((req,res)=>{
     var mailOptions = {
-  from: 'zenopsysevolve@gmail.com', 
-  to: 'dananjayagokhale@gmail.com', 
+      from: 'zenopsysevolve@gmail.com', 
+      to: 'soundaryaschool@gmail.com', 
+      cc:'dananjayagokhale@gmail.com',
+      bcc:'zenopsysevolve@gmail.com',
   subject: 'Soundarya School  Contact us',
   html: `<p>Name : ${req.body.name}</p>
           <p>Contact Num : ${req.body.number}</p>
@@ -24,7 +26,9 @@ SchoolController.contactUs =((req,res)=>{
   SchoolController.alumini =((req,res)=>{
     var mailOptions = {
   from: 'zenopsysevolve@gmail.com', 
-  to: 'zenopsysevolve@gmail.com', 
+  to: 'soundaryaschool@gmail.com', 
+  cc:'dananjayagokhale@gmail.com',
+  bcc:'zenopsysevolve@gmail.com',
   subject: 'Soundarya School  Alumini',
   html: `<p>Name : ${req.body.name}</p>
           <p>Contact Num : ${req.body.number}</p>
@@ -48,7 +52,7 @@ SchoolController.contactUs =((req,res)=>{
                  response:rows[0]
                 })
       }).catch((err)=>{
-         res.status(404).send("Error")
+         res.status(404).send(err)
       })
   });
   SchoolController.getUpcomingEvents =((req,res)=>{
@@ -60,7 +64,7 @@ SchoolController.contactUs =((req,res)=>{
                  response:rows[0]
                 })
       }).catch((err)=>{
-         res.status(404).send("Error")
+         res.status(404).send(err)
       })
   });
    SchoolController.createEvents =((req,res)=>{
@@ -83,7 +87,7 @@ SchoolController.contactUs =((req,res)=>{
                  response:rows[0]
                 })
       }).catch((err)=>{
-         res.status(404).send("Error")
+         res.status(404).send(err)
       })
   });
      SchoolController.postAlbums =((req,res)=>{
@@ -95,7 +99,7 @@ SchoolController.contactUs =((req,res)=>{
                  response:rows[0]
                 })
       }).catch((err)=>{
-         res.status(404).send("Error")
+         res.status(404).send(err)
       })
   });
    SchoolController.postImage =((req,res)=>{
@@ -107,7 +111,7 @@ SchoolController.contactUs =((req,res)=>{
                  response:rows[0]
                 })
       }).catch((err)=>{
-         res.status(404).send("Error")
+         res.status(404).send(err)
       })
   });
 
@@ -133,7 +137,7 @@ SchoolController.contactUs =((req,res)=>{
                  response:rows[0]
                 })
       }).catch((err)=>{
-         res.status(404).send("Error")
+         res.status(404).send(err)
       })
   });
 
@@ -147,7 +151,7 @@ SchoolController.contactUs =((req,res)=>{
                 })
        })
       .catch((err)=>{
-        res.status(404).send("Error")
+        res.status(404).send(err)
       })
 
   });
@@ -157,7 +161,7 @@ SchoolController.contactUs =((req,res)=>{
         res.status(400).send("success")
        })
       .catch((err)=>{
-        res.status(404).send("Error")
+        res.status(404).send(err)
       })
 
   });

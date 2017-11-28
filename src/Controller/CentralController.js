@@ -4,8 +4,10 @@ var CentralController={};
 
 CentralController.admission=((req,res)=>{
     var mailOptions = {
-  from: 'zenopsysevolve@gmail.com', 
-  to: 'zenopsysevolve@gmail.com', 
+      from: 'zenopsysevolve@gmail.com', 
+      to: 'soundaryacentralschool@gmail.com', 
+      cc:'dananjayagokhale@gmail.com',
+      bcc:'zenopsysevolve@gmail.com',
   subject: 'Soundarya Central School contact us',
   html: `<p>Name : ${req.body.name}</p>
           <p>Sex : ${req.body.sex}</p>
@@ -25,8 +27,10 @@ CentralController.admission=((req,res)=>{
   
 CentralController.contactUs =((req,res)=>{
     var mailOptions = {
-  from: 'zenopsysevolve@gmail.com', 
-  to: 'zenopsysevolve@gmail.com', 
+      from: 'zenopsysevolve@gmail.com', 
+      to: 'soundaryacentralschool@gmail.com', 
+      cc:'dananjayagokhale@gmail.com',
+      bcc:'zenopsysevolve@gmail.com',
   subject: 'Soundarya Central School  Admission',
   html: `<p>Name : ${req.body.name}</p>
           <p>Contact Num : ${req.body.number}</p>

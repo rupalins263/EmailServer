@@ -7,8 +7,10 @@ var pucController={};
 
 pucController.contactUs =((req,res)=>{
     var mailOptions = {
-  from: 'zenopsysevolve@gmail.com', 
-  to: 'zenopsysevolve@gmail.com', 
+      from: 'zenopsysevolve@gmail.com', 
+      to: 'soundaryapucollege@gmail.com', 
+      cc:'dananjayagokhale@gmail.com',
+      bcc:'zenopsysevolve@gmail.com',
   subject: 'Soundarya PU College  Contact',
   html: `<p>Name : ${req.body.name}</p>
           <p>Contact Num : ${req.body.number}</p>
